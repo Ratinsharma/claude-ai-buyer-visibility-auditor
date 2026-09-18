@@ -1,50 +1,56 @@
 # AI Buyer Visibility Auditor
 
-Free Claude skill. Install in 60 seconds.
+Claude skill that scores AI buyer visibility /10 and emits a truthful `llms.txt`.
 
-Not a prompt. Not a template.  
-An actual audit tool that scores whether your company is visible to AI — and writes the fix for you.
+Free audit tool for Claude Code / Claude.ai. Runs a 10-query framework across Category, Problem, Trust, and Compliance layers, explains failures, and generates publishable `llms.txt` with zero fabricated claims.
 
-## What it does
-- Runs the exact 10-query audit across 4 layers: Category, Problem, Trust, Compliance
-- Scores you out of 10
-- Tells you exactly which query failed and why
-- Writes your real, publishable `llms.txt` file (the AI equivalent of robots.txt)
-- Zero fabrication — flags gaps instead of inventing claims
+## Features
 
-## How to install
+- 10-query audit across 4 layers (Category / Problem / Trust / Compliance)
+- Score out of 10 with per-query failure reasons
+- Two-speed onboarding: company name + URL first, then verify researched facts
+- Generates production-ready `llms.txt` from verified proof only
+- Flags gaps instead of inventing claims
 
-### Option 1: Claude Code (recommended, 10 seconds)
-Run this in your terminal:
+## Stack
+
+- Claude Code skill (`SKILL.md`)
+- No app runtime — install as a skill, trigger in chat
+
+## Quickstart
+
+### Option 1: Claude Code (recommended)
 
 ```bash
-npx skills add Ratz0007/claude-ai-buyer-visibility-auditor
+npx skills add Ratinsharma/claude-ai-buyer-visibility-auditor
 ```
 
-That's it. Restart Claude Code if it doesn't pick up automatically, then say: **"Audit our AI visibility"**
+Restart Claude Code if needed, then say: **Audit our AI visibility**
 
-### Option 2: Claude Code (manual)
+### Option 2: Manual clone
+
 ```bash
-git clone https://github.com/Ratz0007/claude-ai-buyer-visibility-auditor.git
+git clone https://github.com/Ratinsharma/claude-ai-buyer-visibility-auditor.git
 mv claude-ai-buyer-visibility-auditor ~/.claude/skills/
 ```
-Restart Claude Code, then say: **"Audit our AI visibility"**
 
 ### Option 3: Claude.ai (web)
-Skills upload in Claude.ai is currently limited. The easiest path: copy the contents of `SKILL.md` into your Project's custom instructions or paste into any chat as a system prompt.
 
-Then trigger with: **"Audit our AI visibility"**
+Copy `SKILL.md` into a Project's custom instructions (or paste as system prompt), then trigger with **Audit our AI visibility**.
 
-That's it. It runs the framework, not you.
+## Structure
 
-## Files included
-- `SKILL.md` — The complete skill definition (this is what Claude reads)
-- `README.md` — This file
+```
+claude-ai-buyer-visibility-auditor/
+├── SKILL.md      # Skill definition Claude reads
+├── README.md     # This file
+└── LICENSE       # MIT
+```
 
-## Feedback
-Use it. Break it. Tell me what's wrong with it.  
-Score the audit in comments — I'll tell you which layer to fix first.
+## License
 
-#AIAgents #ClaudeAI #B2BMarketing #GTM #AEO
+MIT — see [LICENSE](./LICENSE).
 
-Built because I was tired of writing the same audit by hand every time.
+## Author
+
+Ratin Sharma
