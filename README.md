@@ -1,56 +1,46 @@
-# AI Buyer Visibility Auditor
+# SEO and AEO operator
 
-Claude skill that scores AI buyer visibility /10 and emits a truthful `llms.txt`.
+Claude skill that audits one site in one niche. It checks whether Google can index and snippet the page, whether that page is actually better than what already ranks, and whether answer engines name and cite you. Then it writes one page brief and a 90-day sequence.
 
-Free audit tool for Claude Code / Claude.ai. Runs a 10-query framework across Category, Problem, Trust, and Compliance layers, explains failures, and generates publishable `llms.txt` with zero fabricated claims.
+It does not promise a number-one ranking. It will not invent search volume, and it will not recommend a reciprocal link network.
 
-## Features
+## What changed
 
-- 10-query audit across 4 layers (Category / Problem / Trust / Compliance)
-- Score out of 10 with per-query failure reasons
-- Two-speed onboarding: company name + URL first, then verify researched facts
-- Generates production-ready `llms.txt` from verified proof only
-- Flags gaps instead of inventing claims
+The previous skill scored ten pasted answers out of ten and treated `llms.txt` as the way to become visible. Google's own guide says AI Overviews use normal Search, and that Google ignores `llms.txt`. This version follows that.
 
-## Stack
+Official references the skill is required to obey:
 
-- Claude Code skill (`SKILL.md`)
-- No app runtime — install as a skill, trigger in chat
+- [Creating helpful, reliable, people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+- [AI features and your website](https://developers.google.com/search/docs/appearance/ai-features)
+- [Guide to optimizing for generative AI features](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)
+- [Spam policies](https://developers.google.com/search/docs/essentials/spam-policies)
 
-## Quickstart
+## What you get
 
-### Option 1: Claude Code (recommended)
+- A niche defined as real queries, with Search Console data winning over guesses.
+- Indexation and snippet gates. Unknown stays unknown.
+- A comparison against pages already in the results, only when a results page was actually opened.
+- An answer-engine log: named, URL cited, and who was recommended instead, per engine you pasted.
+- One brief for the single URL that can win, and only if you have a first-hand fact rivals lack.
+- A fixed order: fix the page you already have, then consider a new one, then editorial mentions.
+
+## Install
 
 ```bash
 npx skills add Ratinsharma/claude-ai-buyer-visibility-auditor
 ```
 
-Restart Claude Code if needed, then say: **Audit our AI visibility**
+Restart Claude Code if needed. Then say: **Audit our SEO and AI visibility.**
 
-### Option 2: Manual clone
+Have the site URL ready. A Search Console query export for the last 90 days makes the audit real. Without it, query ideas stay labeled as hypotheses.
 
-```bash
-git clone https://github.com/Ratinsharma/claude-ai-buyer-visibility-auditor.git
-mv claude-ai-buyer-visibility-auditor ~/.claude/skills/
-```
+## What it will refuse
 
-### Option 3: Claude.ai (web)
-
-Copy `SKILL.md` into a Project's custom instructions (or paste as system prompt), then trigger with **Audit our AI visibility**.
-
-## Structure
-
-```
-claude-ai-buyer-visibility-auditor/
-├── SKILL.md      # Skill definition Claude reads
-├── README.md     # This file
-└── LICENSE       # MIT
-```
+- A guaranteed rank.
+- Commodity articles ("7 tips") as a growth plan.
+- Bought or swapped links.
+- A claim that uploading `llms.txt` gets you into AI Overviews.
 
 ## License
 
-MIT — see [LICENSE](./LICENSE).
-
-## Author
-
-Ratin Sharma
+MIT. See [LICENSE](./LICENSE).
